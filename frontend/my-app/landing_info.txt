@@ -1,0 +1,20 @@
+The navbar:
+The navbar should be of transparent class design and also should contain responsive headings of sections of the page which will redirect to the particular section of the page.
+must have a try now button which redirects to /upload in the far right
+The hero section:
+Left side should contain the product name: xrAI with what the model does- something like "an AI X-ray screening tool" and the right side should contain the hero_image.padding
+must have a try now button which redirects to /upload
+About XrAI section:
+About us should contain the information on what does our model does, simple flow that user uploads a X-ray, it gets processed by the AI model then the result is diplayed along with the gradcam visualization.
+
+How does it work section:
+should contain the information on how the model works. How densenet identifies the diseases and the accuracy of the model. How is gradcam utilized to visualize the Ai provided result
+
+pricing section:
+should contain information about pricing in a card, it's Rs 10 per X-ray classification, included that it's just a proposed price.
+
+Footer
+Should contain, Built in KU hackfest 2025, and team members
+unique shrestha
+abhyudaya pokharel
+bishrant ghimire
