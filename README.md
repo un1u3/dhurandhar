@@ -59,7 +59,7 @@ Doctors remain responsible for final diagnosis and treatment decisions.
 Publicly available datasets:
 - **Normal & Pneumonia** – Kaggle Chest X-ray Dataset  
 - **Tuberculosis (TB)** – Shenzhen TB Dataset  
-
+```
 xray_dataset/
 ├── train/
 ├── val/
@@ -68,7 +68,7 @@ xray_dataset/
 ├── PNEUMONIA
 └── TB
 
-
+```
 
 ---
 
