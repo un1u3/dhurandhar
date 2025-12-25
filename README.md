@@ -1,4 +1,4 @@
-# XRAI - AI-Based Chest X-Ray Screening System  
+# AI-Based Chest X-Ray Screening System  
 **Hackathon Project | Healthcare AI**
 
 ---
@@ -9,13 +9,13 @@
 In rural and semi-urban regions, chest X-ray reports often take **3–7 days** due to limited diagnostic resources. During this delay, diseases like **Tuberculosis (TB)** and **Pneumonia** may worsen or spread, leading to preventable complications.
 
 ### Poor Doctor–Patient Ratio  
-There is a severe shortage of radiologists, with approximately **1 radiologist per 100,000 people** in underserved areas. This imbalance delays diagnosis and reduces the quality of early medical intervention.
+There is a critical shortage of radiologists, with approximately **1 radiologist per 100,000 people** in underserved areas. This results in delayed diagnosis, overworked doctors, and reduced access to early screening.
 
 ---
 
 ## 💡 Our Solution
 
-We developed an **AI-powered chest X-ray screening assistant** that analyzes X-ray images in **seconds** and supports clinicians in identifying high-risk cases early.
+We developed an **AI-powered chest X-ray screening assistant** that analyzes X-ray images in **seconds** and supports doctors in early detection of lung diseases.
 
 **Detects:**
 - Normal  
@@ -24,22 +24,22 @@ We developed an **AI-powered chest X-ray screening assistant** that analyzes X-r
 
 **Provides:**
 - Instant predictions with confidence scores  
-- **Grad-CAM heatmaps** showing affected lung regions  
+- **Grad-CAM heatmaps** highlighting affected lung regions  
 - Fast, low-cost screening support  
 
-⚠️ **Important:** This system is designed to **assist doctors, not replace them**.  
-It serves as a **decision-support tool** to help clinicians prioritize cases and reduce workload.
+⚠️ **This system assists doctors — it does not replace them.**  
+Doctors remain responsible for final diagnosis and treatment decisions.
 
 ---
 
 ## 🚀 Key Features
 
-- Near real-time X-ray analysis (~3 seconds)  
-- Deep learning–based medical image classification  
-- Explainable AI using visual heatmaps  
-- Robust performance on imbalanced datasets  
+- Real-time X-ray analysis (~3 seconds)  
+- **DenseNet-based deep learning model** optimized for medical imaging  
+- Handles class imbalance in medical datasets  
+- Explainable AI using Grad-CAM visualizations  
 - Lightweight and deployment-ready  
-- Designed for rural and resource-limited clinics  
+- Designed for rural and resource-limited healthcare settings  
 
 ---
 
@@ -47,9 +47,9 @@ It serves as a **decision-support tool** to help clinicians prioritize cases and
 
 1. User uploads a chest X-ray image  
 2. Image is resized and normalized (`224 × 224`)  
-3. AI model predicts disease class  
-4. Confidence score is calculated  
-5. Grad-CAM highlights suspicious lung areas  
+3. **DenseNet model** extracts deep visual features  
+4. AI predicts disease class with confidence score  
+5. Grad-CAM highlights suspicious lung regions  
 6. Doctor reviews AI output and makes the final decision  
 
 ---
@@ -69,16 +69,21 @@ xray_dataset/
 └── TB
 
 
+
 ---
 
 ## 🧪 Model Overview
 
-- Architecture: **EfficientNet-B0 (pretrained)**  
+- Architecture: **DenseNet (DenseNet-121 / DenseNet-169)**  
+- Why DenseNet:
+  - Strong feature reuse  
+  - Excellent performance on medical images  
+  - Fewer parameters with deeper representations  
 - Input Size: `224 × 224`  
 - Optimizer: AdamW  
-- Loss: Weighted Cross-Entropy  
-- Accuracy: ~80–85% (hackathon MVP range)  
-- Explainability: Grad-CAM  
+- Loss Function: Weighted Cross-Entropy  
+- Accuracy: ~85-90%  
+- Explainability: **Grad-CAM**
 
 ---
 
@@ -87,6 +92,7 @@ xray_dataset/
 - Python  
 - PyTorch  
 - Torchvision  
+- DenseNet  
 - Grad-CAM  
 - NumPy, Matplotlib  
 - Google Colab  
@@ -95,25 +101,23 @@ xray_dataset/
 
 ## 🔮 Advanced Use Cases
 
-Beyond basic screening, this system can be extended to:
-
 ### 1. Clinical Triage Support  
-Automatically flags **high-risk X-rays** so doctors can prioritize urgent cases first, especially in crowded hospitals.
+Automatically flags **high-risk X-rays** so doctors can prioritize urgent cases in crowded hospitals.
 
 ### 2. Rural Clinic Assistance  
-Acts as a **first-line screening tool** in clinics without on-site radiologists, reducing unnecessary referrals.
+Provides instant screening support in clinics without on-site radiologists.
 
 ### 3. Second Opinion for Doctors  
-Provides a quick AI-based second opinion, helping doctors validate findings and reduce human error.
+Acts as an AI-powered second reader to reduce diagnostic errors and improve confidence.
 
-### 4. Training Tool for Medical Students  
-Grad-CAM heatmaps can help students understand **where and why** abnormalities appear in X-rays.
+### 4. Medical Education Tool  
+Grad-CAM heatmaps help students learn **where pathological patterns appear** in chest X-rays.
 
 ### 5. Mass Screening Programs  
-Useful for TB or pneumonia screening campaigns where thousands of X-rays need quick preliminary review.
+Ideal for TB and pneumonia screening camps requiring fast, large-scale preliminary analysis.
 
 ### 6. Telemedicine Integration  
-Can be integrated into telemedicine platforms to assist remote consultations and faster diagnosis.
+Can be integrated with telemedicine platforms for faster remote diagnosis support.
 
 ---
 
@@ -129,31 +133,22 @@ Can be integrated into telemedicine platforms to assist remote consultations and
 ## ⚠️ Disclaimer
 
 This project is intended for **hackathon, research, and clinical assistance purposes only**.  
-It **does not replace medical professionals**.  
-Final diagnosis and treatment decisions must always be made by licensed doctors.
+It **does not replace doctors**.  
+Final diagnosis and treatment decisions must always be made by licensed medical professionals.
 
 ---
 
 ## 🌍 Impact
 
-- Reduces diagnosis time from **days to seconds**  
-- Assists doctors in high patient-load environments  
+- Reduces screening time from **days to seconds**  
+- Assists doctors under heavy patient loads  
 - Enables early detection of TB and Pneumonia  
-- Low-cost AI screening for underserved regions  
-- Improves healthcare access without replacing human expertise  
+- Low-cost AI support for underserved regions  
+- Improves healthcare access while preserving human oversight  
 
 ---
-
-## 🏁 Hackathon Value
-
-- Clear real-world healthcare problem  
-- Working end-to-end AI system  
-- Explainable and trustworthy outputs  
-- Strong social impact  
-- Scalable MVP built within 48 hours  
-
 ---
 
 ## 🏆 Conclusion
 
-This project demonstrates how **AI can responsibly assist healthcare professionals** by improving efficiency, speed, and accessibility—while keeping doctors firmly in control of final medical decisions.
+This project demonstrates how **DenseNet-based AI systems can responsibly assist doctors**, improving speed and accessibility of chest X-ray screening while keeping medical professionals in full control of clinical decisions.
